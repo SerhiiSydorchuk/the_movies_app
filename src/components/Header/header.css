@@ -1,0 +1,60 @@
+/* Стилі для меню */
+.btn_genre {
+    position: relative;
+    display: inline-block;
+
+}
+.mainList {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+/* Стилі для кнопки Genre */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Стилі для випадаючого списку */
+.listGenres {
+    display: none; /* Сховати список за замовчуванням */
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* Показувати список при наведенні на кнопку Genre */
+.btn_genre:hover .listGenres {
+    display: block;
+}
+
+.listGenres li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.listGenres li:hover {
+    background-color: #ddd;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
