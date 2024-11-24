@@ -1,9 +1,11 @@
 import React from 'react';
-import {getMovies} from "@/services/tmdb.service";
-import MoviesListCard from "@/components/MoviesListCard/MoviesListCard";
+import {getMovies} from "@/app/services/tmdb.service";
+
 import {IMovie} from "../../../../types";
-import MovieInfo from "@/components/MovieInfo/MovieInfo";
-import Stars from "@/components/StarsRating/StarsRating";
+import MoviesListCard from "@/app/components/MoviesListCard/MoviesListCard";
+import Stars from "@/app/components/StarsRating/StarsRating";
+import MovieInfo from "@/app/components/MovieInfo/MovieInfo";
+
 
 
 

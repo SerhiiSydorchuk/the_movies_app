@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import Link from "next/link";
-import {IMovieGenres} from "../../../types";
+import {IMovieGenres} from "../../../../types";
+
 
 type GenreProps = {
     genre:IMovieGenres

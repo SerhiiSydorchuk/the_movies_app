@@ -1,12 +1,13 @@
 import './header.css'
-import GenreComponent from "@/components/genreComponent/genreComponent";
+import GenreComponent from "@/app/components/genreComponent/genreComponent";
 import Link from "next/link";
-import {getGenre} from "@/services/tmdb.service";
-import {IMovieGenres} from "../../../types";
-import UserInfo from "@/components/UserInfo/UserInfo";
+import {getGenre} from "@/app/services/tmdb.service";
+import UserInfo from "@/app/components/UserInfo/UserInfo";
+import {IMovieGenres} from "../../../../types";
 
 const Header = async () => {
     const listGenres = await getGenre.getGenreList();
+
 
     return (
         <header className={'menu'}>
@@ -22,17 +23,15 @@ const Header = async () => {
 
             <div>
                 <form action="/search" method="get">
-                    <input
+                    <input className={'searchInput'}
                         type="text"
                         name="query"
-                        placeholder="Search for a movie..."
+                        placeholder="Search..."
                         required
                     />
-                    <button className={'btn'} type="submit">Search</button>
                 </form>
             </div>
             <UserInfo/>
-
         </header>
 
     );

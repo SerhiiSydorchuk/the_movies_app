@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import urlBuilder from "@/helpers/url.helper";
-import {IMovie} from "../../../types";
+import urlBuilder from "@/app/helpers/url.helper";
 import './poster.css'
+import {IMovie} from "../../../../types";
 
 type MovieProps = { movie: IMovie };
 const PosterPreview:FC<MovieProps> = ({movie}) => {

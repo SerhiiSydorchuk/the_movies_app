@@ -11,35 +11,34 @@ const SearchPagination:FC<PaginationProps> = ({currentPage,totalPages,query}) =>
         return {...query, page:page.toString() }
     }
     return (
-        <div>
+        <footer>
 
             {currentPage > 1 && (
-                <Link
+                <div><Link
                     href={{
                         pathname: '/search',
-                        query: queryBuild(currentPage-1),
-
+                        query: queryBuild(currentPage - 1) ,
                     }}
                 >
                     <button>
                         Previous Page
                     </button>
-                </Link>
+                </Link></div>
             )}
             {currentPage < totalPages && (
-                <Link
+                <div><Link
                     href={{
                         pathname: '/search',
-                        query: queryBuild(currentPage+1),
+                        query: queryBuild(currentPage + 1),
                     }}
                 >
                     <button>
                         Next Page
                     </button>
-                </Link>)}
+                </Link></div>)}
 
 
-        </div>
+        </footer>
     );
 };
 

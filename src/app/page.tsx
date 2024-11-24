@@ -1,13 +1,19 @@
 
+import React from 'react';
+import {getMovies} from "@/app/services/tmdb.service";
+import MoviesList from "@/app/components/MoviesList/MoviesList";
 
+const Home = async ()  => {
 
+    const popularMovies  = await getMovies.getPopularMovie();
 
+    return (
 
-export default function Home() {
-  return (
-    <div>
+        <div>
+            <MoviesList allMovies={popularMovies}/>
 
+        </div>
+    );
+};
 
-    </div>
-  );
-}
+export default Home;

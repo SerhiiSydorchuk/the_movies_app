@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
-import {IMovie} from "../../../types";
+
 import Link from "next/link";
+import {IMovie} from "../../../../types";
 type MovieProps = {
     movie:IMovie
 }

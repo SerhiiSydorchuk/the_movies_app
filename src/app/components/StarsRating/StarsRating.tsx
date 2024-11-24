@@ -1,8 +1,8 @@
 'use client'
 import React, {FC, useEffect, useState} from 'react';
 import StarRatings from 'react-star-ratings';
+import {IMovie} from "../../../../types";
 
-import {IMovie} from "../../../types";
 
 type Props = {
     movie:IMovie

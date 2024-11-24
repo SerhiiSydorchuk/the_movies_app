@@ -1,7 +1,10 @@
 import React from 'react';
-import {getMovies} from "@/services/tmdb.service";
-import MoviesList from "@/components/MoviesList/MoviesList";
-import Pagination from "@/components/Pagination/Pagination";
+import {getMovies} from "@/app/services/tmdb.service";
+import MoviesList from "@/app/components/MoviesList/MoviesList";
+import MyPagination from "@/app/components/Pagination/MyPagination";
+
+
+
 
 
 
@@ -10,15 +13,14 @@ type Param = Promise<{ page: string }>;
 
 const MoviePage = async ({params}:{params:Param}) => {
     const {page} = await params;
-    const allMovies = await getMovies.getAllMovies(Number(page))
+    const currentPage = Number(page)
+    const allMovies = await getMovies.getAllMovies(currentPage)
 
 
     return (
         <div>
             <MoviesList allMovies={allMovies} />
-            <Pagination currentPage={Number(page)} totalPages={allMovies.total_pages} />
-
-
+           <MyPagination currentPage={currentPage} totalPages={allMovies.total_pages}/>
         </div>
     );
 };

@@ -1,5 +1,5 @@
-import urlBuilder from "@/helpers/url.helper";
-import {IGenresModel, IMovie, IPageWithMovies} from "../../types";
+import urlBuilder from "@/app/helpers/url.helper";
+import {IGenresModel, IMovie, IPageWithMovies} from "../../../types";
 
 export const getMovies = {
     getAllMovies: async (page: number ): Promise<IPageWithMovies> => {
@@ -15,6 +15,10 @@ export const getMovies = {
       getCurrentMovie: async (movieId:string):Promise<IMovie> => {
         const movie = await fetch(urlBuilder.movieDetails(movieId)).then(value => value.json())
           return movie
+      },
+      getPopularMovie: async ():Promise<IPageWithMovies>=>{
+        const movies = await fetch(urlBuilder.popularMovies()).then(value => value.json())
+          return movies;
       }
 }
 

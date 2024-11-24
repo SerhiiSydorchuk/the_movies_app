@@ -1,17 +1,14 @@
-/* Стилі для меню */
+header{
+    background-color: lightskyblue;
+    display: flex;
+
+}
 .btn_genre {
     position: relative;
     display: inline-block;
 
 }
-.mainList {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    width: 50vw;
-}
 
-/* Стилі для кнопки Genre */
 .btn {
     background-color: #007bff;
     color: white;
@@ -22,14 +19,26 @@
     border-radius: 5px;
 
 }
+.btnSearch {
 
+    border-radius:0 5px 5px 0;
+
+}
+
+
+.searchInput {
+    width: 300px;
+    border: solid 1px;
+    border-radius: 5px ;
+    padding: 10px 15px;
+}
 .btn:hover {
     background-color: #0056b3;
 }
 
 /* Стилі для випадаючого списку */
 .listGenres {
-    display: none; /* Сховати список за замовчуванням */
+    display: none;
     position: absolute;
     list-style-type: none;
     margin: 0;
@@ -56,5 +65,6 @@
 .menu {
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+   align-items: center;
+    margin-bottom: 15px;
 }

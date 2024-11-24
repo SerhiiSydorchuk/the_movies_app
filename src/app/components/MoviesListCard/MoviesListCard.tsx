@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import './movieListCard.css';
-import {IMovie} from "../../../types";
-import PosterPreview from "@/components/ PosterPreview/PosterPreview";
 import Link from "next/link";
+import PosterPreview from "@/app/components/PosterPreview/PosterPreview";
+import {IMovie} from "../../../../types";
 
 type MovieProps = {
     movie:IMovie

@@ -1,7 +1,7 @@
-import {getMovies} from "@/services/tmdb.service";
-import MoviesList from "@/components/MoviesList/MoviesList";
+import {getMovies} from "@/app/services/tmdb.service";
+import MoviesList from "@/app/components/MoviesList/MoviesList";
 import React from "react";
-import SearchPagination from "@/components/Pagination/SearchPagination";
+import SearchPagination from "@/app/components/Pagination/SearchPagination";
 
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;

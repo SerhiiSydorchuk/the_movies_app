@@ -1,0 +1,9 @@
+.bgi {
+   background-image: url("https://media.istockphoto.com/id/1288852672/photo/old-wall-pattern-texture-cement-blue-dark-abstract-blue-color-design-are-light-with-black.jpg?s=2048x2048&w=is&k=20&c=c2fZdUKGnDvlS3F_5YBRsM5g_1h-t0IJuEvmvpqrqOM=");
+   /*background-size: cover;*/
+}
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
