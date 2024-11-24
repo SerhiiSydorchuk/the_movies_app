@@ -1,0 +1,46 @@
+footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.btn_pag {
+    background-color: #0c91a8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.btn_pag:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+}
+h3 {
+    margin: 0;
+    padding-left: 0;
+}
+.page  {
+    color: black;
+    font-size: 20px;
+    width: 55px;
+    height: 49px;
+    background-color: #0056b3 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.side_page {
+    background-color: #0c91a8 ;
+}
+.prev_page a , .next_page a {
+    display: flex;
+gap: 50px;
+}
+
+footer a {
+    text-decoration: none;
+}

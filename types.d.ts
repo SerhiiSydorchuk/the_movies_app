@@ -4,7 +4,7 @@ interface IGenresModel{
 
 
 
-interface IMovieInfo {
+interface IMovie {
 	adult: boolean;
 	backdrop_path: string;
 	genre_ids: number[];
@@ -21,6 +21,7 @@ interface IMovieInfo {
 	vote_count: number;
 }
 
+
  interface IPageWithMovies {
 	 page: number;
 	 results: IMovie[];
@@ -28,10 +29,9 @@ interface IMovieInfo {
      total_results: number;
  }
 
-export interface IMovie {
+export interface IMovieInfo {
 	adult: boolean;
 	backdrop_path: string;
-	belongs_to_collection:any;
 	budget: number;
 	genres: IMovieGenres[];
 	homepage: string;

@@ -1,7 +1,8 @@
-import {getMovies} from "@/services/tmdb.service";
-import MoviesList from "@/components/MoviesList/MoviesList";
+import {getMovies} from "@/app/services/tmdb.service";
+import MoviesList from "@/app/components/MoviesList/MoviesList";
 import React from "react";
-import SearchPagination from "@/components/Pagination/SearchPagination";
+import SearchPagination from "@/app/components/Pagination/SearchPagination";
+import PageTitle from "@/app/components/PageTitle/PageTitle";
 
 
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
@@ -23,7 +24,7 @@ const SearchPage = async (props: { searchParams: SearchParams }) => {
 
     return (
         <div>
-            <h1>Search Results for: {query}</h1>
+            <PageTitle title={'Search Results for'} name={query}/>
             <MoviesList allMovies={allMovies} />
             <SearchPagination currentPage={currentPage} totalPages={allMovies.total_pages} query={{query}}/>
         </div>

@@ -1,25 +1,25 @@
 import React from 'react';
-import {getMovies} from "@/services/tmdb.service";
-import MoviesListCard from "@/components/MoviesListCard/MoviesListCard";
-import {IMovie} from "../../../../types";
-import MovieInfo from "@/components/MovieInfo/MovieInfo";
-import Stars from "@/components/StarsRating/StarsRating";
+import {getMovies} from "@/app/services/tmdb.service";
+
+import {IMovieInfo} from "../../../../types";
+import MovieInfo from "@/app/components/MovieInfo/MovieInfo";
+import PosterPreview from "@/app/components/PosterPreview/PosterPreview";
+import StarsRating from "@/app/components/StarsRating/StarsRating";
+
 
 
 
 type Param = Promise<{ id:string}>
 const MoviePage = async ({params}:{params:Param}) => {
  const {id}= await params
-        const movieCard :IMovie  = await getMovies.getCurrentMovie(id)
+        const movieCard :IMovieInfo  = await getMovies.getCurrentMovie(id)
     console.log(movieCard)
 
 
 
     return (
         <div>
-               <MoviesListCard key={movieCard.id} movie={movieCard}/>
-               <Stars movie={movieCard}/>
-               <MovieInfo movie={movieCard}/>
+                           <MovieInfo movie={movieCard}/>
         </div>
     );
 };

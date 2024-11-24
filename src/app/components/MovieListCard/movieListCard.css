@@ -1,0 +1,14 @@
+.wrap_movie_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #1d3bc5;
+    border-radius: 10px;
+}
+.movie_title {
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+
+}
